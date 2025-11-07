@@ -11,5 +11,6 @@ public class CreateProductsCommand implements Command<ProductEntity> {
     private String name;
     private String code;
     private Double price;
+    private Integer stock;
 
 }

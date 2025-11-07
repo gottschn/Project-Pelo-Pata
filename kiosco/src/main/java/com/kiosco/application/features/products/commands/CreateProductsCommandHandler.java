@@ -26,6 +26,7 @@ public class CreateProductsCommandHandler implements Command.Handler<CreateProdu
                 .nombre(command.getName())
                 .codigo(command.getCode())
                 .precio(command.getPrice())
+                .stock(command.getStock())
                 .activo(true)
                 .build();
 

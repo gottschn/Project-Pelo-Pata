@@ -10,6 +10,21 @@ public class ProductEntity {
     private String name;
     private String code;
     private Double price;
+    private Integer stock;
     private Boolean active;
 
+
+    public void increaseStock(Integer quantity) {
+        if (this.stock == null) {
+            this.stock = 0;
+        }
+        this.stock += quantity;
+    }
+
+    public void decreaseStock(Integer quantity) {
+        if (this.stock == null || this.stock < quantity) {
+            throw new IllegalStateException("INSUFFICIENT_STOCK");
+        }
+        this.stock -= quantity;
+    }
 }

@@ -12,5 +12,6 @@ public class UpdateProductsCommand implements Command<ProductEntity> {
     private String name;
     private String code;
     private Double price;
+    private Integer stock;
 
 }

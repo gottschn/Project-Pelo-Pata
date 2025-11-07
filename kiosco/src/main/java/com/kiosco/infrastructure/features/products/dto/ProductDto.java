@@ -30,6 +30,9 @@ public class ProductDto {
     @Column(name = "ACTIVO")
     private Boolean activo;
 
+    @Column(name = "STOCK", nullable = false)
+    private Integer stock;
+
     public ProductEntity toDomain(){
         var entity = new ProductEntity();
         entity.setId(this.id);
@@ -37,6 +40,7 @@ public class ProductDto {
         entity.setName(this.nombre);
         entity.setPrice(this.precio);
         entity.setActive(this.activo);
+        entity.setStock(this.stock);
 
         return entity;
     }
